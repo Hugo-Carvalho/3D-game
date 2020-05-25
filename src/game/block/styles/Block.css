@@ -1,0 +1,77 @@
+.block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 64px;
+    height: 64px;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% 50%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.opacity * {
+    opacity: 0.2;
+}
+
+.block:hover .block .side {
+    outline: 1px solid rgba(0, 255, 0, 0.5);
+}
+  
+.x-axis,
+.y-axis,
+.z-axis {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 66px;
+    height: 66px;
+    transform-origin: 50% 50% 50%;
+}
+
+.x-axis {
+    transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+    /*border: solid 2px rgba(255, 0, 0, 0.3);*/
+}
+
+.y-axis {
+    transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+    /*border: solid 2px rgba(0, 255, 0, 0.3);*/
+}
+
+.z-axis {
+    /*border: solid 2px rgba(0, 0, 255, 0.3);*/
+}
+
+.block .side {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 64px;
+    height: 64px;
+    backface-visibility: hidden;
+    outline: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.block .side-top {
+    transform: translateX(0px) translateY(0px) translateZ(32px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.block .side-1 {
+    transform: translateX(0px) translateY(32px) translateZ(0px) rotateX(270deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.block .side-2 {
+    transform: translateX(32px) translateY(0px) translateZ(0px) rotateX(-90deg) rotateY(90deg) rotateZ(0deg);
+}
+
+.block .side-3 {
+    transform: translateX(0px) translateY(-32px) translateZ(0px) rotateX(-270deg) rotateY(0deg) rotateZ(-180deg);
+}
+
+.block .side-4 {
+    transform: translateX(-32px) translateY(0px) translateZ(0px) rotateX(-90deg) rotateY(-90deg) rotateZ(0deg);
+}
